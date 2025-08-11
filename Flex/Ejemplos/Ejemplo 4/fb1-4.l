@@ -20,7 +20,7 @@
 "|"    { return ABS; }
 [0-9]+ { yylval = atoi(yytext); return NUMBER; }
 \n     { return EOL; }
-[ \t]  { /* ignore whitespace */ }
+[ \t]  { }
 .      { printf("Mystery character %c\n", *yytext); }
 %%
 main(int argc, char **argv)
